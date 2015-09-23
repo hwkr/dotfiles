@@ -1,0 +1,68 @@
+#  ---------------------------------------------------------------------------
+#
+#  BASH_ALIASES for OSX
+#  - Ben Hawker
+#
+#  Sections:
+#  1.   Files and Folders
+#  2.   Cat
+#  3.   Bash
+#  A.   Misc
+#
+#  ---------------------------------------------------------------------------
+
+#   -------------------------------
+#   1.  Files and Folders
+#   -------------------------------
+
+alias ls='ls -F'
+alias ll='ls -al'
+alias la='ls -A'
+alias l='ls -CF'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias mkdir='mkdir -pv'
+
+#   -------------------------------
+#   2. Cat
+#   -------------------------------
+alias mdcat="pandoc -f markdown -t plain"
+alias catex="pandoc -f latex -t plain"
+alias catc="vimcat"
+
+#   -------------------------------
+#   4.  Bash
+#   -------------------------------
+
+alias refresh=". ~/.bashrc"
+
+#   -------------------------------
+#   5.  System
+#   -------------------------------
+
+#   OSX Specific Setup
+#   ------------------------------------------------------------
+if [ -x /usr/bin/open ]; then
+    alias f='open -a Finder ./'
+    ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in MacOS Quicklook Preview
+fi
+
+#   Cygwin Specific Setup
+#   ------------------------------------------------------------
+if [ -x /usr/bin/cygstart ]; then
+    alias open='cygstart'
+fi
+
+alias ~="cd ~"
+alias c='clear'
+
+
+#   -------------------------------
+#   A.  Misc
+#   -------------------------------
+
+alias newnotes="python ~/Dropbox/Resources/Shell/Scripts/makeNotes.py"
+alias lastnote="newnotes -l"
+alias nn="newnotes"
+alias no="newnotes -o"
+alias lnote="lastnote"

@@ -1,0 +1,125 @@
+#  ---------------------------------------------------------------------------
+#
+#  BASHRC for OSX
+#  - Ben Hawker
+#
+#  Sections:
+#  1.   Environment
+#  2.   Terminal
+#  3.   Utilities
+#
+#  ---------------------------------------------------------------------------
+
+#   -------------------------------
+#   1.  ENVIRONMENT
+#   -------------------------------
+
+
+#   Interactive Prompt
+#   ------------------------------------------------------------
+#   If not running interactively, don't do anything
+[ -z "$PS1" ] && return
+ 
+
+#   History
+#   ------------------------------------------------------------
+#   Don't put duplicate lines in the history
+
+HISTCONTROL=ignoredups:ignorespace
+ 
+#   Append to the history file, don't overwrite it
+
+shopt -s histappend
+ 
+#   For setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+
+HISTSIZE=1000
+HISTFILESIZE=2000
+ 
+
+#   Window Size
+#   ------------------------------------------------------------
+#   Check the window size after each command and, if necessary,
+#   update the values of LINES and COLUMNS.
+
+shopt -s checkwinsize
+ 
+#   Less
+#   ------------------------------------------------------------
+#   Make less more friendly for non-text input files, see lesspipe(1)
+
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+#   Completion
+#   ------------------------------------------------------------
+#   Enable Completion
+
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+    . /etc/bash_completion
+fi
+
+#   Default Editor
+#   ------------------------------------------------------------
+#   Set nano as the default editor
+
+VISUAL=nano; export VISUAL
+EDITOR=nano; export EDITOR
+
+#   -------------------------------
+#   2.  TERMINAL
+#   -------------------------------
+
+#   Change Prompt
+#   ------------------------------------------------------------
+#   If this is an xterm set the title to user@host dir
+case "$TERM" in
+xterm*|rxvt*)
+    # Set prompt all fancy with line breaks
+    PS1="\n\e[1;36m\u@\H\e[m \e[0;37m\w\e[m\n$ "
+    PS2="\e[1;36m>\e[m"
+    # Set prompt all fancy without line breaks
+    # PS1="\n\e[0;36m\u@\H\e[m \e[0;37m\w\e[m\n$ "
+    ;;
+*)
+    ;;
+esac
+ 
+
+
+#   -------------------------------
+#   3.  UTILITIES
+#   -------------------------------
+
+#   Aliases
+#   ------------------------------------------------------------
+#   Include Aliases
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+#   extract:  Extract most know archives with one command
+#   ---------------------------------------------------------
+    extract () {
+        if [ -f $1 ] ; then
+          case $1 in
+            *.tar.bz2)   tar xjf $1     ;;
+            *.tar.gz)    tar xzf $1     ;;
+            *.tar.xz)    tar xzf $1     ;;
+            *.bz2)       bunzip2 $1     ;;
+            *.rar)       unrar e $1     ;;
+            *.gz)        gunzip $1      ;;
+            *.tar)       tar xf $1      ;;
+            *.tbz2)      tar xjf $1     ;;
+            *.tgz)       tar xzf $1     ;;
+            *.zip)       unzip $1       ;;
+            *.Z)         uncompress $1  ;;
+            *.7z)        7z x $1        ;;
+            *)     echo "'$1' cannot be extracted via extract()" ;;
+             esac
+         else
+             echo "'$1' is not a valid file"
+         fi
+    }
+
+
+

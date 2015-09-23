@@ -1,0 +1,35 @@
+BoldAsFont        = no
+Transparency      = low
+OpaqueWhenFocused = no
+CursorType        = block
+CursorBlinks      = no
+Font              = Bitstream Vera Sans Mono
+FontHeight        = 10
+FontSmoothing     = full
+CopyOnSelect      = no
+ClicksPlaceCursor = yes
+Columns           = 160
+Rows              = 48
+Scrollbar         = none
+BoldAsColour      = yes
+
+ForegroundColour  = 208,208,208
+BackgroundColour  = 21,21,21
+CursorColour      = 0,173,239
+
+Black             = 21,21,21
+BoldBlack         = 80,80,80
+Red               = 172,65,66
+BoldRed           = 116,44,45
+Green             = 144,169,89
+BoldGreen         = 102,119,61
+Yellow            = 244,191,117
+BoldYellow        = 238,158,45
+Blue              = 106,159,181
+BoldBlue          = 70,120,141
+Magenta           = 170,117,159
+BoldMagenta       = 130,80,120
+Cyan              = 117,181,170
+BoldCyan          = 0,173,239
+White             = 208,208,208
+BoldWhite         = 245,245,245
