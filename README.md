@@ -12,6 +12,10 @@ cd ~/.dotfiles
 ./bootstrap
 ```
 
+## Docs
+
+Documentation on setting up environments is under `docs`.
+
 ## Credits
 
 * Bootstrapper based on [Zach Holman's Bootstrapper](https://github.com/holman/dotfiles)
