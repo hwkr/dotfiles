@@ -8,12 +8,6 @@
         email = AUTHOREMAIL
 [credential]
         helper = GIT_CREDENTIAL_HELPER
-[alias]
-        co = checkout
-        promote = !$ZSH/bin/git-promote
-        wtf     = !$ZSH/bin/git-wtf
-        rank-contributors = !$ZSH/bin/git-rank-contributors
-        count   = !git shortlog -sn
 [color]
         diff = auto
         status = auto
@@ -21,13 +15,9 @@
         ui = true
 [core]
         excludesfile = ~/.gitignore
-        editor = vim
+        editor = nano
 [apply]
         whitespace = nowarn
-[mergetool]
-        keepBackup = false
-[difftool]
-        prompt = false
 [help]
         autocorrect = 1
 [push]
