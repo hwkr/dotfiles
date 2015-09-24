@@ -36,7 +36,7 @@ sudo chmod +rx /usr/bin/screenfetch
 sudo apt-get install dconf-tools
 
 # # For fresh Nvidia Drivers
-sudo add-apt-repository ppa:xorg-edgers/ppa
+sudo add-apt-repository -y ppa:xorg-edgers/ppa
 sudo apt-get update && sudo apt-get dist-upgrade
 
 # # For Nvidia Cards
@@ -61,12 +61,13 @@ sudo apt-get -y install gufw
 
 #Install Elementary OS extras
 
-sudo add-apt-repository ppa:mpstark/elementary-tweaks-daily
+sudo add-apt-repository -y ppa:mpstark/elementary-tweaks-daily
+sudo apt-get update
 sudo apt-get -y install elementary-tweaks
 
 #! No support (Yet) for Freya
 
-# sudo apt-add-repository ppa:versable/elementary-update
+# sudo apt-add-repository -y ppa:versable/elementary-update
 # sudo apt-get update
 
 # sudo apt-get -y install elementary-desktop elementary-tweaks
@@ -74,3 +75,19 @@ sudo apt-get -y install elementary-tweaks
 # sudo apt-get -y install elementary-elfaenza-icons elementary-nitrux-icons
 # sudo apt-get -y install elementary-plank-themes
 # sudo apt-get -y install wingpanel-slim indicator-synapse
+
+#Add Fonts
+
+sudo add-apt-repository -y ppa:unit193/sourcecodepro
+sudo apt-get update
+sudo apt-get -y install fonts-source-code-pro-otf
+sudo apt-get -y install fonts-source-code-pro-ttf
+
+# Sets up Pantheon Terminal with the desired attributes
+
+gsettings set org.pantheon.terminal.settings palette '#2d2d2d:#f2777a:#99cc99:#ffcc66:#6699cc:#cc99cc:#0091c8:#d3d0c8:#5b5b5b:#f2777a:#99cc99:#ffcc66:#6699cc:#cc99cc:#00adef:#f2f0ec'
+
+gsettings set org.pantheon.terminal.settings font 'Source Code Pro'
+gsettings set org.pantheon.terminal.settings cursor-color '#00adef'
+
+
