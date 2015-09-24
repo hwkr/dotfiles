@@ -9,5 +9,5 @@ To setup all dotfiles on the system
 ```sh
 git clone https://github.com/bitHero/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
-script/bootstrap
+./bootstrap
 ```
