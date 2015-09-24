@@ -26,3 +26,7 @@ You can also just feed the bootstrapper just the helper,
 ```sh
 /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
 ```
+
+## OSX
+
+Should just work, the bootstrapper uses the OSX Keyring.
