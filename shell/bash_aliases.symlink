@@ -54,6 +54,14 @@ if [ -x /usr/bin/cygstart ]; then
     alias open='cygstart'
 fi
 
+#   Ubuntu Specific Setup
+#   ------------------------------------------------------------
+if [ -x /usr/bin/xdg-open ]; then
+    open(){
+    	(xdg-open $1 2> /dev/null > /dev/null &);
+    }
+fi
+
 alias ~="cd ~"
 alias c='clear'
 
