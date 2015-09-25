@@ -35,6 +35,7 @@ alias catc="vimcat"
 #   -------------------------------
 
 alias refresh=". ~/.bashrc"
+alias plz="sudo $(fc -ln -1)"
 
 #   -------------------------------
 #   5.  System
