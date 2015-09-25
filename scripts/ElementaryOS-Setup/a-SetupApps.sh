@@ -5,21 +5,26 @@
 # ---------------------------------------------------------------------
 
 # Chrome
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
 
+if grep -Fxq "deb http://dl.google.com/linux/chrome/deb/ stable main" /etc/apt/sources.list.d/google-chrome.list
+then
+    echo "Google Chrome Repository Already Added"
+else
+    wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+	sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+fi
 
-sudo add-apt-repository ppa:webupd8team/sublime-text-2
-sudo add-apt-repository -y ppa:unit193/sourcecodepro
-sudo add-apt-repository -y ppa:mpstark/elementary-tweaks-daily
-sudo add-apt-repository -y ppa:xorg-edgers/ppa # Nvidia and AMD Drivers
+sudo add-apt-repository ppa:webupd8team/sublime-text-2 -y
+sudo add-apt-repository ppa:unit193/sourcecodepro -y
+sudo add-apt-repository ppa:mpstark/elementary-tweaks-daily -y
+sudo add-apt-repository ppa:xorg-edgers/ppa -y # Nvidia and AMD Drivers
 
 # !!!!!!!!!!! No support (Yet) for Freya !!!!!!!!!!!!!!!!
-# sudo apt-add-repository -y ppa:versable/elementary-update
+# sudo apt-add-repository ppa:versable/elementary-update -y
 
 # Update Repository Cache
 # ---------------------------------------------------------------------
-sudo apt-get update && sudo apt-get dist-upgrade
+sudo apt-get update && sudo apt-get -y dist-upgrade
 
 
 # Install Applications
@@ -32,7 +37,7 @@ sudo apt-get -y install google-chrome-stable
 sudo apt-get -y install unace unrar zip unzip xz-utils p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract file-roller
 
 #Install DCONF Tools
-sudo apt-get install dconf-tools
+sudo apt-get -y install dconf-tools
 
 #Install Ubuntu Restricted Extras
 sudo apt-get -y install ubuntu-restricted-extras
