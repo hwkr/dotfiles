@@ -75,10 +75,12 @@ EDITOR=nano; export EDITOR
 case "$TERM" in
 xterm*|rxvt*)
     # Set prompt all fancy with line breaks
-    PS1="\n\e[1;36m\u@\H\e[m \e[0;37m\w\e[m\n$ "
-    PS2="\e[1;36m>\e[m"
+    # PS1="\n\e[1;36m\u@\H\e[m \e[0;37m\w\e[m\n$ "
     # Set prompt all fancy without line breaks
-    # PS1="\n\e[0;36m\u@\H\e[m \e[0;37m\w\e[m\n$ "
+    PS1="\n\e[1;36m\u@\H \e[m\e[0;37m\w\e[m $ "
+    
+    # Set second prompt bold cyan
+    PS2="\e[1;36m>\e[m"
     ;;
 *)
     ;;
