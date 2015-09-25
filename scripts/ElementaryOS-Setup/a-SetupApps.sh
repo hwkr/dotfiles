@@ -76,12 +76,18 @@ sudo apt-get -y install elementary-tweaks
 # sudo apt-get -y install elementary-plank-themes
 # sudo apt-get -y install wingpanel-slim indicator-synapse
 
-#Add Fonts
+#Install Fonts
 
 sudo add-apt-repository -y ppa:unit193/sourcecodepro
 sudo apt-get update
 sudo apt-get -y install fonts-source-code-pro-otf
 sudo apt-get -y install fonts-source-code-pro-ttf
+
+#Install Sublime Text
+
+sudo add-apt-repository ppa:webupd8team/sublime-text-2
+sudo apt-get update
+sudo apt-get install sublime-text
 
 # Sets up Pantheon Terminal with the desired attributes
 
