@@ -39,6 +39,9 @@ sudo apt-get -y install unace unrar zip unzip xz-utils p7zip-full p7zip-rar shar
 #Install DCONF Tools
 sudo apt-get -y install dconf-tools
 
+#Install Pandoc
+sudo apt-get -y install pandoc
+
 #Install Ubuntu Restricted Extras
 sudo apt-get -y install ubuntu-restricted-extras
 
@@ -93,6 +96,9 @@ sudo apt-get -y purge midori-granite
 
 # Remove Music Player Thing
 sudo apt-get -y purge noise
+
+# Remove Scratch Editor
+sudo apt-get -y purge stratch-text-editor
 
 # Tidy Up
 sudo apt-get -y autoremove
