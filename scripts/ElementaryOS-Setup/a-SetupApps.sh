@@ -6,7 +6,7 @@
 
 # Chrome
 
-if grep -Fxq "deb http://dl.google.com/linux/chrome/deb/ stable main" /etc/apt/sources.list.d/google-chrome.list
+if grep -Fxqs "deb http://dl.google.com/linux/chrome/deb/ stable main" /etc/apt/sources.list.d/google-chrome.list
 then
     echo "Google Chrome Repository Already Added"
 else
