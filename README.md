@@ -12,6 +12,8 @@ cd ~/.dotfiles
 ./bootstrap
 ```
 
+It's a good idea to put the repository in `~/.dotfiles` as some of the scripts rely on it.
+
 ## Docs
 
 Documentation on setting up environments is under `docs`.
