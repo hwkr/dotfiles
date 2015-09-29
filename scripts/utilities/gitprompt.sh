@@ -38,10 +38,10 @@ function get_git_prompt() {
             COLOR="${RED}"
         fi
         if [ "${unstaged}" == "0" ]; then
-            COLOR="${YEL}"
+            COLOR="${BYEL}"
         fi
         if [ "${tocommit}" == "0" ]; then
-            COLOR="${BYEL}"
+            COLOR="${YEL}"
         fi
         # if [ "${ICON}" != "" ]; then
             # ICON="$ICON"
