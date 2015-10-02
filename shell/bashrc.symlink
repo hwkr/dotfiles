@@ -40,25 +40,25 @@ HISTFILESIZE=2000
 #   ------------------------------------------------------------
 #   Exported for Color Output
 
-export  RST="\e[m"      # ANSI Reset
+export  RST="\[\033[0m\]"      # ANSI Reset
 
-export  BLK="\e[0;30m"  # Black
-export  RED="\e[0;31m"  # Red
-export  GRN="\e[0;32m"  # Green
-export  YEL="\e[0;33m"  # Yellow
-export  BLU="\e[0;34m"  # Blue
-export  VIO="\e[0;35m"  # Violet
-export  CYN="\e[0;36m"  # Cyan
-export  WHT="\e[0;37m"  # White
+export  BLK="\[\033[0m\033[30m\]"  # Black
+export  RED="\[\033[0m\033[31m\]"  # Red
+export  GRN="\[\033[0m\033[32m\]"  # Green
+export  YEL="\[\033[0m\033[33m\]"  # Yellow
+export  BLU="\[\033[0m\033[34m\]"  # Blue
+export  VIO="\[\033[0m\033[35m\]"  # Violet
+export  CYN="\[\033[0m\033[36m\]"  # Cyan
+export  WHT="\[\033[0m\033[37m\]"  # White
 
-export BBLK="\e[1;30m"  # Bold Black
-export BRED="\e[1;31m"  # Bold Red
-export BGRN="\e[1;32m"  # Bold Green
-export BYEL="\e[1;33m"  # Bold Yellow
-export BBLU="\e[1;34m"  # Bold Blue
-export BVIO="\e[1;35m"  # Bold Violet
-export BCYN="\e[1;36m"  # Bold Cyan
-export BWHT="\e[1;37m"  # Bold White
+export BBLK="\[\033[1m\033[30m\]"  # Bold Black
+export BRED="\[\033[1m\033[31m\]"  # Bold Red
+export BGRN="\[\033[1m\033[32m\]"  # Bold Green
+export BYEL="\[\033[1m\033[33m\]"  # Bold Yellow
+export BBLU="\[\033[1m\033[34m\]"  # Bold Blue
+export BVIO="\[\033[1m\033[35m\]"  # Bold Violet
+export BCYN="\[\033[1m\033[36m\]"  # Bold Cyan
+export BWHT="\[\033[1m\033[37m\]"  # Bold White
 
 #   Window Size
 #   ------------------------------------------------------------
@@ -116,7 +116,7 @@ xterm*|rxvt*)
     PS1="$PROMPT_START$GIT_PS1$PROMPT_END"
     
     # Set second prompt bold cyan
-    PS2="\e[1;36m>\e[m"
+    PS2="${BCYN}>${RST}"
     ;;
 *)
     ;;
