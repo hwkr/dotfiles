@@ -99,7 +99,7 @@ EDITOR=nano; export EDITOR
 #   Change the Prompt Here
 
 PROMPT_START="\n${BCYN}\u@\H${RST} ${WHT}\w${RST}"
-PROMPT_END=" $ "
+PROMPT_END=" \$ "
 
 #   Source Git Prompt
 #   ------------------------------------------------------------
@@ -113,7 +113,7 @@ source ~/.dotfiles/scripts/utilities/gitprompt.sh
 case "$TERM" in
 xterm*|rxvt*)
     # Set prompt all fancy
-    PS1="$PROMPT_START$GIT_PS1$PROMPT_END"
+    PROMPT_COMMAND="PS1=\"$PROMPT_START$GIT_PS1$PROMPT_END\""
     
     # Set second prompt bold cyan
     PS2="${BCYN}>${RST}"

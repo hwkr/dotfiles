@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Get current git status
 function get_git_prompt() {
     BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
@@ -47,11 +49,11 @@ function get_git_prompt() {
             # ICON="$ICON"
         # fi
         
-        echo -e " [${COLOR}${BRANCH}${RST}${ICON}]"
+        echo " [${COLOR}${BRANCH}${RST}${ICON}]"
     else
         echo ""
     fi
 }
 
 
-export GIT_PS1="\`get_git_prompt\`"
+export GIT_PS1="\$(get_git_prompt)"
