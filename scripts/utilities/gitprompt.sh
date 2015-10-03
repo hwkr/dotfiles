@@ -6,7 +6,7 @@ function get_git_prompt() {
     if [ ! "${BRANCH}" == "" ]
     then
         ICON=""
-        COLOR="${GRN}"
+        COLOR="${BGRN}"
 
         # Parse the Status
         status=`git status 2>&1 | tee`
@@ -28,11 +28,11 @@ function get_git_prompt() {
         
         # Check branch status
         if [ "${ahead}" == "0" ]; then
-            ICON="\xE2\x86\x91"
+            ICON="`echo -e "\xE2\x86\x91"`"
         elif [ "${behind}" == "0" ]; then
-            ICON="\xE2\x86\x93"
+            ICON="`echo -e "\xE2\x86\x93"`"
         elif [ "${diverged}" == "0" ]; then
-            ICON="\xE2\x86\x97"
+            ICON="`echo -e "\xE2\x86\x97"`"
         fi
         
         # Check file status
@@ -43,7 +43,7 @@ function get_git_prompt() {
             COLOR="${BYEL}"
         fi
         if [ "${tocommit}" == "0" ]; then
-            COLOR="${YEL}"
+            COLOR="${GRN}"
         fi
         # if [ "${ICON}" != "" ]; then
             # ICON="$ICON"
