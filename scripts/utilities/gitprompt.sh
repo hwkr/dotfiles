@@ -6,7 +6,7 @@ function get_git_prompt() {
     if [ ! "${BRANCH}" == "" ]
     then
         ICON=""
-        COLOR="${BGRN}"
+        COLOR="${GRN}"
 
         # Parse the Status
         status=`git status 2>&1 | tee`
@@ -43,7 +43,7 @@ function get_git_prompt() {
             COLOR="${BYEL}"
         fi
         if [ "${tocommit}" == "0" ]; then
-            COLOR="${GRN}"
+            COLOR="${YEL}"
         fi
         # if [ "${ICON}" != "" ]; then
             # ICON="$ICON"
