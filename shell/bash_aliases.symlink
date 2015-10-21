@@ -23,6 +23,10 @@ alias cp='cp -iv'
 alias mv='mv -iv'
 alias mkdir='mkdir -pv'
 
+# Host a simple http server
+alias SimpleHTTPServer="python -m SimpleHTTPServer"
+
+
 #   -------------------------------
 #   2. Cat
 #   -------------------------------
