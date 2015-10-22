@@ -24,7 +24,7 @@ alias mv='mv -iv'
 alias mkdir='mkdir -pv'
 
 # Host a simple http server
-alias SimpleHTTPServer="python -m SimpleHTTPServer"
+alias simpleserver="python -m SimpleHTTPServer"
 
 
 #   -------------------------------
