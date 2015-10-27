@@ -153,6 +153,11 @@ then
   else
     fail "error installing dependencies"
   fi
+
+  info "Linking sublime text"
+  if [ -x "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ]; then
+    ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
+  fi
 fi
 
 echo ''
