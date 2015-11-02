@@ -15,7 +15,6 @@ else
 fi
 
 sudo add-apt-repository ppa:webupd8team/sublime-text-2 -y
-sudo add-apt-repository ppa:unit193/sourcecodepro -y
 sudo add-apt-repository ppa:mpstark/elementary-tweaks-daily -y
 sudo add-apt-repository ppa:xorg-edgers/ppa -y # Nvidia and AMD Drivers
 
@@ -81,9 +80,9 @@ sudo apt-get -y install elementary-tweaks
 # sudo apt-get -y install elementary-plank-themes
 # sudo apt-get -y install wingpanel-slim indicator-synapse
 
-#Install Fonts
-sudo apt-get -y install fonts-source-code-pro-otf
-sudo apt-get -y install fonts-source-code-pro-ttf
+#Install Fonts (broken)
+# sudo apt-get -y install fonts-source-code-pro-otf
+# sudo apt-get -y install fonts-source-code-pro-ttf
 
 #Install Sublime Text
 sudo apt-get -y install sublime-text
