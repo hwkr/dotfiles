@@ -74,8 +74,6 @@ alias c='clear'
 #   A.  Misc
 #   -------------------------------
 
-alias newnotes="python ~/Dropbox/Resources/Shell/Scripts/makeNotes.py"
-alias lastnote="newnotes -l"
-alias nn="newnotes"
-alias no="newnotes -o"
-alias lnote="lastnote"
+alias newnotes="notedown -o"
+alias lastnote="notedown -l"
+alias startlecture="lastnote; newnotes"
