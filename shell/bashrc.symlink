@@ -106,7 +106,7 @@ PROMPT_END=" \$ "
 #   ------------------------------------------------------------
 #   Try to add the git pompt
 
-source ~/.dotfiles/scripts/utilities/gitprompt.sh
+source ~/.dotfiles/scripts/prompt/gitprompt.sh
 
 #   Change Prompt
 #   ------------------------------------------------------------
