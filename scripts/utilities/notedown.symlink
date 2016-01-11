@@ -1,0 +1,61 @@
+#!/usr/bin/env python
+
+import os
+import sys
+import datetime
+import re
+from subprocess import call
+
+
+exp = re.compile("# Lecture ([0-9]+) - Notes")
+
+prefix = "Notes--"
+suffix = ".md"
+
+today = datetime.date.today()
+
+oldNotes = {}
+
+for f in os.listdir(os.getcwd()):
+	if f.startswith(prefix):
+		try:
+		    oldNotes[datetime.datetime.strptime(f.lstrip(prefix).rstrip(suffix), "%Y-%m-%d")] = f
+		except Exception, e:
+			continue
+
+newNoteName = prefix + str(today) + suffix
+
+if oldNotes:
+	latestNote = open(sorted(oldNotes.items())[-1][1], "r")
+
+	if ("-l" in sys.argv):
+		call(["open", latestNote.name])
+		exit()
+
+	if (newNoteName in oldNotes.values()):
+		raise OSError("Note already exists for {0:%Y-%m-%d}".format(today))
+
+	title = latestNote.readlines()[0]
+	match = exp.match(title)
+
+
+	if not match: raise ValueError("Note title was invalid'{0}'".format(title))
+
+	noteNumber = int(match.groups(title)[0]) + 1
+else:
+	noteNumber = 1
+
+if ("-l" in sys.argv):
+	raise OSError("No notes found")
+
+
+newNote = open(newNoteName, "w")
+
+newNote.write("# Lecture {0} - Notes  \n\n### {1:%B %-d, %Y}  \n\n".format(noteNumber, today))
+
+newNote.close()
+
+print "Created notes for Lecture {0} ({1})".format(noteNumber, newNoteName)
+
+if ("-o" in sys.argv):
+	call(["open", newNoteName])
