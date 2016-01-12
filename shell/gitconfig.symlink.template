@@ -15,7 +15,6 @@
         ui = true
 [core]
         excludesfile = ~/.gitignore
-        autocrlf = true
         editor = nano
 [apply]
         whitespace = nowarn
