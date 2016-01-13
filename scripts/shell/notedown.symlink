@@ -51,7 +51,7 @@ if ("-l" in sys.argv):
 
 newNote = open(newNoteName, "w")
 
-newNote.write("# Lecture {0} - Notes  \n\n### {1:%B %-d, %Y}  \n\n".format(noteNumber, today))
+newNote.write("# Lecture {0} - Notes  \n\n**{1:%B %-d, %Y}**  \n\n".format(noteNumber, today))
 
 newNote.close()
 
