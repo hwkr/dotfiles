@@ -49,6 +49,9 @@ alias plz='sudo $(fc -ln -1)'
 #   ------------------------------------------------------------
 if [ -x /usr/bin/open ]; then
     alias f='open -a Finder ./'
+    alias showfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+    alias hidefiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
     ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in MacOS Quicklook Preview
 fi
 
