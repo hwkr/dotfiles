@@ -1,6 +1,6 @@
 # Ben's Dotfiles
 
-Ben's dotfiles (all in one place!)
+Ben's dotfiles (all in one place!) :laughing:
 
 ## Setup
 
