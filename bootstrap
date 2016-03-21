@@ -138,10 +138,16 @@ install_dotfiles () {
     dst="$HOME/.$(basename "${src%.*}")"
     link_file "$src" "$dst"
   done
+
 }
 
 install_scripts () {
   info 'installing scripts'
+
+  if ! [ -w /usr/local/bin/ ]
+  then
+    fail "don't have permissions to link scripts"
+  fi
 
   local overwrite_all=false backup_all=false skip_all=false
 
