@@ -27,6 +27,12 @@ fail () {
   exit
 }
 
+warn () {
+  printf "\r\033[2K  [\033[0;WARN\033[0m] $1\n"
+  echo ''
+  exit
+}
+
 setup_gitconfig () {
   if ! [ -f shell/gitconfig.symlink ]
   then
@@ -146,7 +152,7 @@ install_scripts () {
 
   if ! [ -w /usr/local/bin/ ]
   then
-    fail "don't have permissions to link scripts"
+    warn "don't have permissions to link scripts"
   fi
 
   local overwrite_all=false backup_all=false skip_all=false
