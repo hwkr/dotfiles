@@ -14,7 +14,7 @@ info () {
 }
 
 user () {
-  printf "\r  [ \033[0;33m?\033[0m ] $1 "
+  printf "\r  [ \033[0;34m?\033[0m ] $1 "
 }
 
 success () {
@@ -28,7 +28,7 @@ fail () {
 }
 
 warn () {
-  printf "\r\033[2K  [\033[0;WARN\033[0m] $1\n"
+  printf "\r\033[2K  [\033[0;33mWARN\033[0m] $1\n"
   echo ''
   exit
 }
