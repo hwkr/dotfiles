@@ -59,6 +59,7 @@ fi
 #   ------------------------------------------------------------
 if [ -x /usr/bin/cygstart ]; then
     alias open='cygstart'
+    alias subl="cygstart /cygdrive/c/Program\ Files/Sublime\ Text\ 2/sublime_text.exe"
 fi
 
 #   Ubuntu Specific Setup
