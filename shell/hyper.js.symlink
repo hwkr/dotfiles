@@ -16,7 +16,7 @@ module.exports = {
     foregroundColor: '#fff',
 
     // terminal background color
-    backgroundColor: 'rgba(20,20,20,0.8)',
+    backgroundColor: 'rgba(40,40,40,0.9)',
 
     // border color (window, tabs)
     borderColor: '#333',
@@ -82,7 +82,8 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-    'hyperterm-panda'
+  //  'hyperterm-panda',
+  //  'hyperpower-plus',
   ],
 
   // in development, you can create a directory under
