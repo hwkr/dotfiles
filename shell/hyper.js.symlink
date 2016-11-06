@@ -1,13 +1,13 @@
 module.exports = {
   config: {
     // default font size in pixels for all tabs
-    fontSize: 11,
+    fontSize: 12,
 
     // font family with optional fallbacks
     fontFamily: '"Source Code Pro", Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
-    cursorColor: 'rgba(87,100,198,0.6)',
+    cursorColor: 'rgba(255,97,179,0.9)',
 
     // `BEAM` for |, `UNDERLINE` for _, `BLOCK` for █
     cursorShape: 'BLOCK',
@@ -16,7 +16,7 @@ module.exports = {
     foregroundColor: '#fff',
 
     // terminal background color
-    backgroundColor: 'rgba(40,40,40,0.9)',
+    backgroundColor: '#222',
 
     // border color (window, tabs)
     borderColor: '#333',
@@ -47,7 +47,7 @@ module.exports = {
       lightGreen: '#33ff00',
       lightYellow: '#ffff00',
       lightBlue: '#0066ff',
-      lightMagenta: '#5764c6',
+      lightMagenta: '#FF61B3',
       lightCyan: '#00ffff',
       lightWhite: '#ffffff'
     },
