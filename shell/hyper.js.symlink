@@ -1,3 +1,22 @@
+const console_colors = {
+  black: '#333333',
+  red: '#dd6964',
+  green: '#8ee386',
+  yellow: '#ffd080',
+  blue: '#4eacff',
+  magenta: '#fa9aff',
+  cyan: '#00ffff',
+  white: '#cccccc',
+  lightBlack: '#666666',
+  lightRed: '#f58783',
+  lightGreen: '#aafba2',
+  lightYellow: '#ffe89c',
+  lightBlue: '#6ec5f9',
+  lightMagenta: '#FF61B3',
+  lightCyan: '#b7f0ff',
+  lightWhite: '#ffffff'
+}
+
 module.exports = {
   config: {
     // default font size in pixels for all tabs
@@ -13,7 +32,7 @@ module.exports = {
     cursorShape: 'BLOCK',
 
     // color of the text
-    foregroundColor: '#fff',
+    foregroundColor: '#eee',
 
     // terminal background color
     backgroundColor: '#222',
@@ -33,24 +52,13 @@ module.exports = {
     // the full list. if you're going to provide the full color palette,
     // including the 6 x 6 color cubes and the grayscale map, just provide
     // an array here instead of a color map object
-    colors: {
-      black: '#000000',
-      red: '#dd6964',
-      green: '#8ee386',
-      yellow: '#ffd080',
-      blue: '#4eacff',
-      magenta: '#fa9aff',
-      cyan: '#00ffff',
-      white: '#f1f1f0',
-      lightBlack: '#666666',
-      lightRed: '#f58783',
-      lightGreen: '#aafba2',
-      lightYellow: '#ffe89c',
-      lightBlue: '#6ec5f9',
-      lightMagenta: '#FF61B3',
-      lightCyan: '#b7f0ff',
-      lightWhite: '#ffffff'
-    },
+    colors: console_colors,
+
+    // Fix background/foreground colors
+    termCSS: `
+    	[style*="background-color: rgb(238, 238, 238)"] { background-color: ${console_colors.black} !important; }
+    	[style*="color: rgb(0, 0, 255)"] { color: ${console_colors.lightBlue} !important; }
+    `,
 
     // the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
     // if left empty, your system's login shell will be used by default
