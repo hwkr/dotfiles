@@ -1,6 +1,6 @@
-# Ben's Dotfiles
+# Brynn's Dotfiles
 
-Ben's dotfiles (all in one place!) :laughing:
+Brynn's dotfiles (all in one place!) :laughing:
 
 ## Setup
 
