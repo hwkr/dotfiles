@@ -7,7 +7,7 @@ Stuff to remember for setting up git.
 The the Windows credential store can be used by downloading [git credential winstore](https://gitcredentialstore.codeplex.com/). Then give the bootstrapper the path, e.g.,
 
 ```sh
-/cygdrive/c/Users/Ben/AppData/Roaming/GitCredStore/git-credential-winstore.exe
+/cygdrive/c/Users/Brynn/AppData/Roaming/GitCredStore/git-credential-winstore.exe
 ```
 
 ## Ubuntu & Elementary OS
