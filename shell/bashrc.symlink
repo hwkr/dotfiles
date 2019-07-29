@@ -118,10 +118,15 @@ xterm*|rxvt*)
 
     # Set second prompt bold cyan
     PS2="${BCYN}>${RST}"
+
+    # Put Bash command in title bar
+    trap 'printf "\033]0;%s\007" "${BASH_COMMAND//[^[:print:]]/}"' DEBUG
     ;;
 *)
     ;;
 esac
+
+
 
 #   -------------------------------
 #   3.  UTILITIES
