@@ -6,7 +6,7 @@ const console_colors = {
   blue: '#4eacff',
   magenta: '#fa9aff',
   cyan: '#00ffff',
-  white: '#cccccc',
+  white: '#ffffff',
   lightBlack: '#666666',
   lightRed: '#f58783',
   lightGreen: '#aafba2',
@@ -20,7 +20,7 @@ const console_colors = {
 module.exports = {
   config: {
     // default font size in pixels for all tabs
-    fontSize: 11,
+    fontSize: 12,
 
     // font family with optional fallbacks
     fontFamily: '"Source Code Pro", Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',
@@ -42,17 +42,17 @@ module.exports = {
 
     // custom css to embed in the main window
     css: `
-    header.header_header {
-      background: transparent !important;
-      border-bottom: none !important;
-    }
-    li.tab_tab,
-    span.tab_textActive {
-      background: transparent !important;
-    }
-    div.splitpane_divider {
-      background-color: rgba(0, 0, 0, 0.08) !important;
-    }
+      header.header_header {
+        background: transparent !important;
+        border-bottom: none !important;
+      }
+      li.tab_tab,
+      span.tab_textActive {
+        background: transparent !important;
+      }
+      div.splitpane_divider {
+        background-color: rgba(0, 0, 0, 0.08) !important;
+      }
     `,
 
     // custom padding (css format, i.e.: `top right bottom left`)
@@ -90,39 +90,29 @@ module.exports = {
     // Plugin Config
 
     hyperTabs: {
-      border: true,
+      border: false,
     },
 
-    ayu: {
-      showTabBorder: false,
-    },
 
-    hyperline: {
-      plugins: [
-        'hostname',
-        'ip',
-        'cpu',
-        'memory',
-        'network',
-        'battery'
-      ]
-    },
-
+  hyperBorder: {
+    borderWidth: '1px',
+    borderColors: ['#E5EBF2', '#EDF0F5'],
+  },
 
   },
+
 
   // a list of plugins to fetch and install from npm
   // format: [@org/]project[#version]
   plugins: [
     'hyperterm-cursor',
-    'hyperline',
-    // 'hyper-ayu-light',
-    'hyper-ayu-mirage',
-    'hyper-transparent-dynamic',
+    'hyper-ayu-light',
+    'hyperborder',
+    // 'hyper-ayu-mirage',
     'hyper-tabs-enhanced',
-    // 'hypercwd',
-    // 'hyperterm-clicky',
-    // 'hyper-smyck',
+    'hypercwd',
+    'hyperterm-paste',
+    'hyperterm-clicky',
   ],
 
   // in development, you can create a directory under
