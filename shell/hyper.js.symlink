@@ -89,14 +89,10 @@ module.exports = {
 
     // Plugin Config
 
-    hyperTabs: {
-      border: false,
-    },
-
-
   hyperBorder: {
-    borderWidth: '1px',
-    borderColors: ['#E5EBF2', '#EDF0F5'],
+    borderColors: ['#EB64B9', '#74dfc4'],
+    blurredColors: ['#b381c5', '#91889b'],
+    borderWidth: '2px',
   },
 
   },
@@ -106,8 +102,9 @@ module.exports = {
   // format: [@org/]project[#version]
   plugins: [
     'hyperterm-cursor',
-    'hyper-ayu-light',
     'hyperborder',
+    'hyperwave',
+    // 'hyperterm-material-palenight',
     // 'hyper-ayu-mirage',
     'hyper-tabs-enhanced',
     'hypercwd',

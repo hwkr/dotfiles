@@ -98,7 +98,7 @@ EDITOR=nano; export EDITOR
 #   ------------------------------------------------------------
 #   Change the Prompt Here
 
-PROMPT_START="\n${BCYN}\u@\h${RST} ${WHT}\w${RST}"
+PROMPT_START="\n${RED}\u@\h${RST} ${WHT}\w${RST}"
 OSX_PATH="\[\033]0;\w\007\]"
 PROMPT_END=" ${BBLK}λ${RST} "
 
@@ -163,5 +163,12 @@ fi
          fi
     }
 
+
+
+
+
+#### FIG ENV VARIABLES ####
+[[ -s ~/.fig/fig.sh ]] && source ~/.fig/fig.sh
+#### END FIG ENV VARIABLES ####
 
 
