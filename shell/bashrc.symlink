@@ -162,13 +162,3 @@ fi
              echo "'$1' is not a valid file"
          fi
     }
-
-
-
-
-
-#### FIG ENV VARIABLES ####
-[[ -s ~/.fig/fig.sh ]] && source ~/.fig/fig.sh
-#### END FIG ENV VARIABLES ####
-
-

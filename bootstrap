@@ -168,28 +168,5 @@ setup_gitconfig
 install_dotfiles
 install_scripts
 
-# If we're on a Mac, let's install and setup homebrew.
-if [ "$(uname -s)" == "Darwin" ]
-then
-  info "installing dependencies"
-  if source bin/dot > /tmp/dotfiles-dot 2>&1
-  then
-    success "dependencies installed"
-  else
-    fail "error installing dependencies"
-  fi
-
-  info "Linking sublime text"
-  if [ -x "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ]; then
-    info "Linking sublime text"
-    if ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl 2>&1
-    then
-      success "Sublime Linked"
-    else
-      fail "Sublime failed to link"
-    fi
-  fi
-fi
-
 echo ''
 echo '  All installed!'
