@@ -23,4 +23,8 @@
 [push]
         default = simple
 [pull]
-	ff = only
+        ff = only
+[alias]
+        cleanup = !git remote prune origin && git branch --merged | egrep -v '(^\\*|master|main|develop)' | xargs git branch -d
+	undo = reset --soft HEAD^
+        amend = commit -a --amend --no-edit
