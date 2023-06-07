@@ -1,0 +1,6 @@
+{
+  "files.associations": {
+    "*.symlink": "shellscript",
+    "*.js.symlink": "javascript"
+  }
+}

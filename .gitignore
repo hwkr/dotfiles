@@ -1,3 +1,4 @@
 # Ignore the Generated gitconfig
 /shell/gitconfig.symlink
 
+!.vscode/
