@@ -1,21 +1,21 @@
 const console_colors = {
-  black: '#333333',
-  red: '#dd6964',
-  green: '#8ee386',
-  yellow: '#ffd080',
-  blue: '#4eacff',
-  magenta: '#fa9aff',
-  cyan: '#00ffff',
-  white: '#ffffff',
-  lightBlack: '#666666',
-  lightRed: '#f58783',
-  lightGreen: '#aafba2',
-  lightYellow: '#ffe89c',
-  lightBlue: '#6ec5f9',
-  lightMagenta: '#FF61B3',
-  lightCyan: '#b7f0ff',
-  lightWhite: '#ffffff'
-}
+  black: "#333333",
+  red: "#dd6964",
+  green: "#8ee386",
+  yellow: "#ffd080",
+  blue: "#4eacff",
+  magenta: "#fa9aff",
+  cyan: "#00ffff",
+  white: "#ffffff",
+  lightBlack: "#666666",
+  lightRed: "#f58783",
+  lightGreen: "#aafba2",
+  lightYellow: "#ffe89c",
+  lightBlue: "#6ec5f9",
+  lightMagenta: "#FF61B3",
+  lightCyan: "#b7f0ff",
+  lightWhite: "#ffffff",
+};
 
 module.exports = {
   config: {
@@ -23,22 +23,26 @@ module.exports = {
     fontSize: 12,
 
     // font family with optional fallbacks
-    fontFamily: '"Source Code Pro", Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',
+    fontFamily:
+      '"Berkeley Mono", "Fira Code Retina", "Lucida Console", monospace',
+
+    disableLigatures: false,
+    webGLRenderer: false,
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
-    cursorColor: 'rgba(255,97,179,0.9)',
+    cursorColor: "rgba(255,97,179,0.9)",
 
     // `BEAM` for |, `UNDERLINE` for _, `BLOCK` for █
-    cursorShape: 'BLOCK',
+    cursorShape: "BLOCK",
 
     // color of the text
-    foregroundColor: '#eee',
+    foregroundColor: "#eee",
 
     // terminal background color
-    backgroundColor: '',
+    backgroundColor: "",
 
     // border color (window, tabs)
-    borderColor: '',
+    borderColor: "",
 
     // custom css to embed in the main window
     css: `
@@ -56,7 +60,7 @@ module.exports = {
     `,
 
     // custom padding (css format, i.e.: `top right bottom left`)
-    padding: '5px 10px 15px 10px',
+    padding: "10px 16px",
 
     // the full list. if you're going to provide the full color palette,
     // including the 6 x 6 color cubes and the grayscale map, just provide
@@ -67,17 +71,17 @@ module.exports = {
 
     // the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
     // if left empty, your system's login shell will be used by default
-    shell: '',
+    shell: "",
 
     // for setting shell arguments (i.e. for using interactive shellArgs: ['-i'])
     // by default ['--login'] will be used
-    shellArgs: ['--login'],
+    shellArgs: ["--login"],
 
     // for environment variables
     env: {},
 
     // set to false for no bell
-    bell: 'SOUND',
+    bell: "SOUND",
 
     // if true, selected text will automatically be copied to the clipboard
     copyOnSelect: false,
@@ -89,31 +93,32 @@ module.exports = {
 
     // Plugin Config
 
-  hyperBorder: {
-    borderColors: ['#EB64B9', '#74dfc4'],
-    blurredColors: ['#b381c5', '#91889b'],
-    borderWidth: '2px',
+    hyperBorder: {
+      borderColors: ["#EB64B9", "#74dfc4"],
+      blurredColors: ["#b381c5", "#91889b"],
+      borderWidth: "4px",
+      borderRadiusInner: "10px",
+      borderRadiusOuter: "10px",
+    },
   },
-
-  },
-
 
   // a list of plugins to fetch and install from npm
   // format: [@org/]project[#version]
   plugins: [
-    'hyperterm-cursor',
-    'hyperborder',
-    'hyperwave',
+    "hyperterm-cursor",
+    "hyperborder",
+    "hyperwave",
     // 'hyperterm-material-palenight',
     // 'hyper-ayu-mirage',
-    'hyper-tabs-enhanced',
-    'hypercwd',
-    'hyperterm-paste',
-    'hyperterm-clicky',
+    "hyper-font-ligatures",
+    "hyper-tabs-enhanced",
+    "hypercwd",
+    "hyperterm-paste",
+    "hyperterm-clicky",
   ],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
   // to load it and avoid it being `npm install`ed
-  localPlugins: []
+  localPlugins: [],
 };

@@ -100,7 +100,7 @@ EDITOR=nano; export EDITOR
 
 PROMPT_START="\n${BRED}\u@\h${RST} ${WHT}\w${RST}"
 OSX_PATH="\[\033]0;\w\007\]"
-PROMPT_END=" ${BBLK}λ${RST} "
+PROMPT_END=" ${BBLK}|>${RST} "
 
 #   Source Git Prompt
 #   ------------------------------------------------------------
