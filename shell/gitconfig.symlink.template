@@ -15,16 +15,24 @@
         ui = true
 [core]
         excludesfile = ~/.gitignore
-        editor = nano
+        editor = code --wait
 [apply]
         whitespace = nowarn
 [help]
-        autocorrect = 1
+        autocorrect = 20
 [push]
         default = simple
+        autoSetupRemote = true
 [pull]
         ff = only
+[diff]
+        tool = default-difftool
+[difftool "default-difftool"]
+        cmd = code --wait --diff $LOCAL $REMOTE
 [alias]
         cleanup = !git remote prune origin && git branch --merged | egrep -v '(^\\*|master|main|develop)' | xargs git branch -d
-	undo = reset --soft HEAD^
+        undo = reset --soft HEAD^
         amend = commit -a --amend --no-edit
+        lease = push --force-with-lease
+[init]
+	defaultBranch = main
