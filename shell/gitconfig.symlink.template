@@ -33,6 +33,6 @@
         cleanup = !git remote prune origin && git branch --merged | egrep -v '(^\\*|master|main|develop)' | xargs git branch -d
         undo = reset --soft HEAD^
         amend = commit -a --amend --no-edit
-        lease = push --force-with-lease
+        lease = push --force-with-lease --force-if-includes
 [init]
 	defaultBranch = main
