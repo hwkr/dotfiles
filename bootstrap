@@ -147,6 +147,22 @@ install_dotfiles () {
 
 }
 
+install_vscode_settings () {
+  info 'installing vscode settings'
+
+  local overwrite_all=false backup_all=false skip_all=false
+
+  for src in $(find -H "$DOTFILES_ROOT/vscode" -maxdepth 2 -name '*')
+  do
+    dst="$HOME/Library/Application Support/Code/User/$(basename "${src}")"
+    link_file "$src" "$dst"
+
+    dst="$HOME/Library/Application Support/Cursor/User/$(basename "${src}")"
+    link_file "$src" "$dst"
+  done
+
+}
+
 install_scripts () {
   info 'installing scripts'
 
@@ -166,6 +182,7 @@ install_scripts () {
 
 setup_gitconfig
 install_dotfiles
+install_vscode_settings
 install_scripts
 
 echo ''
