@@ -64,4 +64,5 @@ $RECYCLE.BIN/
 
 *.secret
 *.secret.*
+*.ignore.*
 

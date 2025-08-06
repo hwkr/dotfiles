@@ -39,7 +39,7 @@ module.exports = {
     foregroundColor: "#eee",
 
     // terminal background color
-    backgroundColor: "",
+    // backgroundColor: "",
 
     // border color (window, tabs)
     borderColor: "",
@@ -97,8 +97,27 @@ module.exports = {
       borderColors: ["#EB64B9", "#74dfc4"],
       blurredColors: ["#b381c5", "#91889b"],
       borderWidth: "4px",
-      borderRadiusInner: "10px",
-      borderRadiusOuter: "10px",
+      borderRadiusInner: "8px",
+      borderRadiusOuter: "12px",
+    },
+
+    // summon: {
+    //   hotkey: "Alt+`",
+    // },
+
+    overlay: {
+      animate: false,
+      hideDock: false,
+      hotkeys: ["Alt+`"],
+      position: "right",
+      size: 0.45,
+      unique: true,
+    },
+
+    hyperTransparent: {
+      backgroundColor: "#27212e",
+      opacity: 0.5,
+      vibrancy: "dark",
     },
   },
 
@@ -108,8 +127,11 @@ module.exports = {
     "hyperterm-cursor",
     "hyperborder",
     "hyperwave",
+    "hyper-transparent",
+    // "hyperterm-overlay",
     // 'hyperterm-material-palenight',
     // 'hyper-ayu-mirage',
+    // "hyperterm-summon",
     "hyper-font-ligatures",
     "hyper-tabs-enhanced",
     "hypercwd",
