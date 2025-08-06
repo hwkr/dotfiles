@@ -1,33 +1,37 @@
 {
-  "debug.toolBarLocation": "docked",
-  "diffEditor.ignoreTrimWhitespace": true,
-  "editor.fontFamily": "'Berkeley Mono', 'Source Code Pro', Menlo, Monaco, 'Courier New', monospace",
-  "editor.fontLigatures": true,
-  "editor.fontWeight": "normal",
-  "editor.formatOnSave": true,
-  "editor.linkedEditing": true,
-  "editor.minimap.enabled": true,
-  "editor.renderWhitespace": "all",
-  "editor.tabCompletion": "onlySnippets",
-  "editor.wordWrap": "on",
-  "explorer.confirmDelete": false,
-  "explorer.confirmDragAndDrop": false,
-  "git.autofetch": true,
-  "git.confirmSync": false,
-  "git.enableSmartCommit": true,
-  "githubPullRequests.ignoredPullRequestBranches": [ "main" ],
-  "gitlens.advanced.messages": { "suppressGitMissingWarning": true },
-  "gitlens.codeLens.enabled": false,
-  "gitlens.currentLine.enabled": false,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "svg.preview.mode": "svg",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "vue.autoInsert.dotValue": true,
-  "vue.updateImportsOnFileMove.enabled": true,
-  "workbench.activityBar.orientation": "vertical",
-  "workbench.colorCustomizations": {
-    "editorGhostText.foreground": "#936aa2",
-    "terminal.ansiBrightRed": "#eb64B9"
-  },
-  "workbench.colorTheme": "LaserWave"
+    "debug.toolBarLocation": "docked",
+    "diffEditor.ignoreTrimWhitespace": true,
+    "editor.fontFamily": "'Berkeley Mono', 'Source Code Pro', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.fontWeight": "normal",
+    "editor.formatOnSave": true,
+    "editor.linkedEditing": true,
+    "editor.minimap.enabled": true,
+    "editor.renderWhitespace": "all",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordWrap": "on",
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "githubPullRequests.ignoredPullRequestBranches": [
+        "main"
+    ],
+    "gitlens.advanced.messages": {
+        "suppressGitMissingWarning": true
+    },
+    "gitlens.codeLens.enabled": false,
+    "gitlens.currentLine.enabled": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "svg.preview.mode": "svg",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "vue.autoInsert.dotValue": true,
+    "vue.updateImportsOnFileMove.enabled": true,
+    "workbench.activityBar.orientation": "vertical",
+    "workbench.colorCustomizations": {
+        "editorGhostText.foreground": "#936aa2",
+        "terminal.ansiBrightRed": "#eb64B9"
+    },
+    "workbench.colorTheme": "LaserWave"
 }

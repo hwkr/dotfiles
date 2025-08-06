@@ -152,7 +152,7 @@ install_vscode_settings () {
 
   local overwrite_all=false backup_all=false skip_all=false
 
-  for src in $(find -H "$DOTFILES_ROOT/vscode" -maxdepth 2 -name '*')
+  for src in $(find -H "$DOTFILES_ROOT/vscode" -maxdepth 2 -name '*.json')
   do
     dst="$HOME/Library/Application Support/Code/User/$(basename "${src}")"
     link_file "$src" "$dst"
