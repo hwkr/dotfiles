@@ -2,37 +2,37 @@
 #
 
 [hub]
-        protocol = https
+  protocol = https
 [user]
-        name = AUTHORNAME
-        email = AUTHOREMAIL
+  name = AUTHORNAME
+  email = AUTHOREMAIL
 [credential]
-        helper = GIT_CREDENTIAL_HELPER
+  helper = GIT_CREDENTIAL_HELPER
 [color]
-        diff = auto
-        status = auto
-        branch = auto
-        ui = true
+  diff = auto
+  status = auto
+  branch = auto
+  ui = true
 [core]
-        excludesfile = ~/.gitignore
-        editor = code --wait
+  excludesfile = ~/.gitignore
+  editor = code --wait
 [apply]
-        whitespace = nowarn
+  whitespace = nowarn
 [help]
-        autocorrect = 20
+  autocorrect = 20
 [push]
-        default = simple
-        autoSetupRemote = true
+  default = simple
+  autoSetupRemote = true
 [pull]
-        ff = only
+  ff = only
 [diff]
-        tool = default-difftool
+  tool = default-difftool
 [difftool "default-difftool"]
-        cmd = code --wait --diff $LOCAL $REMOTE
+  cmd = code --wait --diff $LOCAL $REMOTE
 [alias]
-        cleanup = !git remote prune origin && git branch --merged | egrep -v '(^\\*|master|main|develop)' | xargs git branch -d
-        undo = reset --soft HEAD^
-        amend = commit -a --amend --no-edit
-        lease = push --force-with-lease --force-if-includes
+  cleanup = !git remote prune origin && git branch --merged | egrep -v '(^\\*|master|main|develop)' | xargs git branch -d
+  undo = reset --soft HEAD^
+  amend = commit -a --amend --no-edit
+  lease = push --force-with-lease --force-if-includes
 [init]
-	defaultBranch = main
+  defaultBranch = main
